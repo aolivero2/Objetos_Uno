@@ -5,6 +5,10 @@
  */
 package interfaz;
 
+import clase.Fraccionario;
+import javax.swing.JOptionPane;
+import clase.DenominadorCeroException;
+
 /**
  *
  * @author SERVIDOR
@@ -54,6 +58,12 @@ public class Principal1 extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 51, 0));
         jLabel1.setText("OPERACIONES CON FRACCIONARIOS");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, -1, -1));
+
+        txtNumerador1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNumerador1KeyTyped(evt);
+            }
+        });
         jPanel1.add(txtNumerador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 50, 30));
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 50, 10));
         jPanel1.add(txtDenominador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 50, 30));
@@ -80,9 +90,19 @@ public class Principal1 extends javax.swing.JFrame {
         jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, 50, 10));
 
         cmdCalcular.setText("Calcular");
+        cmdCalcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdCalcularActionPerformed(evt);
+            }
+        });
         jPanel1.add(cmdCalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 80, 30));
 
         cmdLimpiar.setText("Limpiar");
+        cmdLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdLimpiarActionPerformed(evt);
+            }
+        });
         jPanel1.add(cmdLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 180, 80, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -98,6 +118,128 @@ public class Principal1 extends javax.swing.JFrame {
 
         setBounds(0, 0, 553, 274);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void cmdCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdCalcularActionPerformed
+       int op,n1,n2,d1,d2,sw=1;
+       Fraccionario f1,f2,f3=null;
+       
+       if (txtNumerador1.getText().trim().isEmpty()){
+           JOptionPane.showMessageDialog(this, "Digite el numerador 1", "Error",JOptionPane.ERROR_MESSAGE);
+           txtNumerador1.requestFocusInWindow();
+           sw=0;
+       }else if (txtNumerador2.getText().trim().isEmpty()){
+         JOptionPane.showMessageDialog(this, "Digite el numerador 2", "Error",JOptionPane.ERROR_MESSAGE);
+           txtNumerador2.requestFocusInWindow();
+          sw=0;
+       }else if (txtDenominador1.getText().trim().isEmpty()){
+           JOptionPane.showMessageDialog(this, "Digite el denominador 1", "Error",JOptionPane.ERROR_MESSAGE);
+           txtDenominador1.requestFocusInWindow();
+         sw=0;  
+       }else if (txtDenominador2.getText().trim().isEmpty()){
+          JOptionPane.showMessageDialog(this, "Digite el denominador 2", "Error",JOptionPane.ERROR_MESSAGE);
+           txtDenominador2.requestFocusInWindow(); 
+        sw=0;   
+       }else{
+          try{
+            Integer.parseInt(txtNumerador1.getText());
+           }catch (NumberFormatException e){
+            JOptionPane.showMessageDialog(this,"El primer numerador debe ser un numero valido","Error",JOptionPane.ERROR_MESSAGE);
+            txtNumerador1.requestFocusInWindow();
+            txtNumerador1.selectAll();
+            sw=0;
+           }
+           try{
+               Integer.parseInt(txtNumerador2.getText());
+           }catch (NumberFormatException e){
+            JOptionPane.showMessageDialog(this,"El segundo numerador debe ser un numero valido","Error",JOptionPane.ERROR_MESSAGE);
+            txtNumerador2.requestFocusInWindow();
+            txtNumerador2.selectAll(); 
+            sw=0;
+           }
+           try{
+              Integer.parseInt(txtDenominador1.getText());
+           }catch (NumberFormatException e){
+            JOptionPane.showMessageDialog(this,"El primer denominador debe ser un numero valido","Error",JOptionPane.ERROR_MESSAGE);
+            txtDenominador1.requestFocusInWindow();
+            txtDenominador1.selectAll();  
+            sw=0;
+           }
+           try{
+             Integer.parseInt(txtDenominador2.getText());
+           }catch (NumberFormatException e){
+            JOptionPane.showMessageDialog(this,"El segundo denominador debe ser un numero valido","Error",JOptionPane.ERROR_MESSAGE);
+            txtDenominador2.requestFocusInWindow();
+            txtDenominador2.selectAll();  
+            sw=0;  
+           }
+       }
+           if (sw==1){
+           
+          n1= Integer.parseInt (txtNumerador1.getText());
+          d1= Integer.parseInt(txtDenominador1.getText());
+          n2= Integer.parseInt(txtNumerador2.getText());
+          d2= Integer.parseInt (txtDenominador2.getText());
+          op = cmbOperaciones.getSelectedIndex();
+          
+        if(n1==0 && n2 ==0 ){
+        JOptionPane.showMessageDialog(this,"No digite cero", "Error", JOptionPane.ERROR_MESSAGE);
+        txtNumerador1.requestFocusInWindow();
+        txtNumerador1.selectAll();
+        txtNumerador2.requestFocusInWindow();
+        txtNumerador2.selectAll();
+        } 
+        else {
+           try{
+    
+            f1 = new Fraccionario (n1,d1);
+            f2 = new Fraccionario (n2,d2);
+                   
+            switch (op){
+                case 0:
+                    f3 = f1.sumar (f2);
+                    
+                    break;
+                    
+                case 1:
+                    f3 = f1.restar (f2);
+                    
+                    break;
+                    
+                case 2:
+                    f3 = f1.multiplicacion(f2);
+                    break;
+                case 3:
+                    f3=f1.division (f2); 
+                case 4:
+                 
+                 
+            }
+            txtNumerador3.setText(""+f3.getNumerador());
+              txtDenominador3.setText(""+f3.getDenominador());
+              
+          }catch (DenominadorCeroException e){
+          JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE); 
+          }
+        }
+       }
+    }//GEN-LAST:event_cmdCalcularActionPerformed
+
+    private void cmdLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdLimpiarActionPerformed
+        txtNumerador1.setText("");
+        txtNumerador2.setText("");
+        txtNumerador3.setText("");
+        txtDenominador1.setText("");
+        txtDenominador2.setText("");
+        txtDenominador3.setText("");
+        
+        txtNumerador1.requestFocusInWindow();
+        cmbOperaciones.setSelectedIndex(0);
+    }//GEN-LAST:event_cmdLimpiarActionPerformed
+
+    private void txtNumerador1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNumerador1KeyTyped
+        
+          
+    }//GEN-LAST:event_txtNumerador1KeyTyped
 
     /**
      * @param args the command line arguments
