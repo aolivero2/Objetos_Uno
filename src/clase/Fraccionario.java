@@ -12,7 +12,7 @@ package clase;
 public class Fraccionario {
     private int numerador;
     private int denominador;
-    private int numeromixto;
+    
 
     public Fraccionario (int numerador, int denominador) throws DenominadorCeroException {
         this.numerador = numerador;
@@ -76,14 +76,7 @@ public class Fraccionario {
         return f;
         
     }
-    public Fraccionario numerom (Fraccionario nm) throws DenominadorCeroException{
-        Fraccionario f;
-        int op,res;
-        op=this.numerador / this.denominador;
-        res=(op);
-        f = new Fraccionario (op,res);
-        return f;
-    }
+   
    
 }
 
