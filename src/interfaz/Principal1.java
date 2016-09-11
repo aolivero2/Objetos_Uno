@@ -21,6 +21,9 @@ public class Principal1 extends javax.swing.JFrame {
      */
     public Principal1() {
         initComponents();
+        cmdCalcular.setEnabled(true);
+        cmdNumixto.setEnabled (false);
+        cmdLimpiar.setEnabled(false);
     }
 
     /**
@@ -56,7 +59,7 @@ public class Principal1 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 204, 102));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 102));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -266,6 +269,10 @@ public class Principal1 extends javax.swing.JFrame {
                     }
                     txtNumerador3.setText("" + f3.getNumerador());
                     txtDenominador3.setText("" + f3.getDenominador()); 
+                    
+                    cmdCalcular.setEnabled(false);
+                    cmdNumixto.setEnabled(true);
+                    cmdLimpiar.setEnabled(true);
 
                 } catch (DenominadorCeroException e) {
                     JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
@@ -279,12 +286,19 @@ public class Principal1 extends javax.swing.JFrame {
         txtNumerador1.setText("");
         txtNumerador2.setText("");
         txtNumerador3.setText("");
+        txtNumerador4.setText("");
         txtDenominador1.setText("");
         txtDenominador2.setText("");
         txtDenominador3.setText("");
+        txtDenominador4.setText("");
+        txtNumeroMixto.setText("");
         
         txtNumerador1.requestFocusInWindow();
         cmbOperaciones.setSelectedIndex(0);
+        
+        cmdCalcular.setEnabled(true);
+        cmdNumixto.setEnabled(false);
+        cmdLimpiar.setEnabled(false);
     }//GEN-LAST:event_cmdLimpiarActionPerformed
 
     private void txtNumerador1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNumerador1KeyTyped
@@ -311,6 +325,10 @@ public class Principal1 extends javax.swing.JFrame {
            d=String.valueOf(df);
            txtDenominador4.setText(d);
           }
+         cmdCalcular.setEnabled(false);
+         cmdLimpiar.setEnabled(true); 
+         cmdNumixto.setEnabled(false);
+        
        
     }//GEN-LAST:event_cmdNumixtoActionPerformed
 
