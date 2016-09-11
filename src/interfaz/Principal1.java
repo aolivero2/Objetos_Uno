@@ -312,7 +312,7 @@ public class Principal1 extends javax.swing.JFrame {
         nf=Integer.parseInt(txtNumerador3.getText());
         df=Integer.parseInt (txtDenominador3.getText());
           if (nf<df){
-              JOptionPane.showMessageDialog(this,"El numerador final no debe ser menos que el donominador final","Error",JOptionPane.ERROR_MESSAGE);
+              JOptionPane.showMessageDialog(this,"El numerador final no debe ser menor que el donominador final","Error",JOptionPane.ERROR_MESSAGE);
               txtNumerador1.requestFocusInWindow();
               txtNumerador1.selectAll();
           } else {
