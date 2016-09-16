@@ -49,24 +49,25 @@ public class Principal1 extends javax.swing.JFrame {
         txtDenominador3 = new javax.swing.JTextField();
         txtNumeroMixto = new javax.swing.JTextField();
         jSeparator3 = new javax.swing.JSeparator();
-        cmdCalcular = new javax.swing.JButton();
-        cmdLimpiar = new javax.swing.JButton();
-        cmdNumixto = new javax.swing.JButton();
         txtNumerador4 = new javax.swing.JTextField();
         jSeparator4 = new javax.swing.JSeparator();
         txtDenominador4 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        cmdNumixto = new javax.swing.JButton();
+        cmdCalcular = new javax.swing.JButton();
+        cmdLimpiar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 102));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 153));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(102, 0, 204));
         jLabel1.setText("OPERACIONES CON FRACCIONARIOS");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, -1, -1));
 
         txtNumerador1.setBackground(new java.awt.Color(255, 204, 153));
         txtNumerador1.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -74,23 +75,23 @@ public class Principal1 extends javax.swing.JFrame {
                 txtNumerador1KeyTyped(evt);
             }
         });
-        jPanel1.add(txtNumerador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 50, 30));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 50, 10));
+        jPanel1.add(txtNumerador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, 50, 30));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 50, 10));
 
         txtDenominador1.setBackground(new java.awt.Color(255, 204, 153));
-        jPanel1.add(txtDenominador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 50, 30));
+        jPanel1.add(txtDenominador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 50, 30));
 
         cmbOperaciones.setBackground(new java.awt.Color(255, 255, 153));
         cmbOperaciones.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         cmbOperaciones.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Suma", "Resta", "Multiplicación", "División", "Convertir a numero mixto", " " }));
-        jPanel1.add(cmbOperaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 120, 30));
+        jPanel1.add(cmbOperaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 100, 120, 30));
 
         txtNumerador2.setBackground(new java.awt.Color(255, 204, 153));
-        jPanel1.add(txtNumerador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 80, 50, 30));
+        jPanel1.add(txtNumerador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 70, 50, 30));
 
         txtDenominador2.setBackground(new java.awt.Color(255, 204, 153));
-        jPanel1.add(txtDenominador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, 50, 30));
-        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 120, 50, 10));
+        jPanel1.add(txtDenominador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 120, 50, 30));
+        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, 50, 10));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setText("=");
@@ -98,36 +99,33 @@ public class Principal1 extends javax.swing.JFrame {
 
         txtNumerador3.setEditable(false);
         txtNumerador3.setBackground(new java.awt.Color(255, 204, 153));
-        jPanel1.add(txtNumerador3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 80, 50, 30));
+        jPanel1.add(txtNumerador3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 70, 50, 30));
 
         txtDenominador3.setEditable(false);
         txtDenominador3.setBackground(new java.awt.Color(255, 204, 153));
-        jPanel1.add(txtDenominador3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 130, 50, 30));
+        jPanel1.add(txtDenominador3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 120, 50, 30));
 
         txtNumeroMixto.setEditable(false);
         txtNumeroMixto.setBackground(new java.awt.Color(255, 204, 153));
-        jPanel1.add(txtNumeroMixto, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, 40, 30));
-        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 120, 50, 10));
+        jPanel1.add(txtNumeroMixto, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 200, 40, 30));
+        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, 50, 10));
 
-        cmdCalcular.setBackground(new java.awt.Color(204, 153, 255));
-        cmdCalcular.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        cmdCalcular.setText("Calcular");
-        cmdCalcular.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmdCalcularActionPerformed(evt);
-            }
-        });
-        jPanel1.add(cmdCalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 90, 40));
+        txtNumerador4.setEditable(false);
+        txtNumerador4.setBackground(new java.awt.Color(255, 204, 153));
+        jPanel1.add(txtNumerador4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 170, 50, 30));
+        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 210, 50, 10));
 
-        cmdLimpiar.setBackground(new java.awt.Color(204, 153, 255));
-        cmdLimpiar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        cmdLimpiar.setText("Limpiar");
-        cmdLimpiar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmdLimpiarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(cmdLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 80, 40));
+        txtDenominador4.setEditable(false);
+        txtDenominador4.setBackground(new java.awt.Color(255, 204, 153));
+        jPanel1.add(txtDenominador4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 220, 50, 30));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setText("=");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, -1, -1));
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 0), 4));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cmdNumixto.setBackground(new java.awt.Color(204, 153, 255));
         cmdNumixto.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -137,20 +135,29 @@ public class Principal1 extends javax.swing.JFrame {
                 cmdNumixtoActionPerformed(evt);
             }
         });
-        jPanel1.add(cmdNumixto, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, -1, 30));
+        jPanel2.add(cmdNumixto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 190, 30));
 
-        txtNumerador4.setEditable(false);
-        txtNumerador4.setBackground(new java.awt.Color(255, 204, 153));
-        jPanel1.add(txtNumerador4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 170, 50, 30));
-        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 50, 10));
+        cmdCalcular.setBackground(new java.awt.Color(204, 153, 255));
+        cmdCalcular.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        cmdCalcular.setText("Calcular");
+        cmdCalcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdCalcularActionPerformed(evt);
+            }
+        });
+        jPanel2.add(cmdCalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 90, 40));
 
-        txtDenominador4.setEditable(false);
-        txtDenominador4.setBackground(new java.awt.Color(255, 204, 153));
-        jPanel1.add(txtDenominador4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 220, 50, 30));
+        cmdLimpiar.setBackground(new java.awt.Color(204, 153, 255));
+        cmdLimpiar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        cmdLimpiar.setText("Limpiar");
+        cmdLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdLimpiarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(cmdLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 80, 40));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel3.setText("=");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 200, -1, -1));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 230, 130));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -162,10 +169,10 @@ public class Principal1 extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 341, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(602, 341));
+        setSize(new java.awt.Dimension(602, 379));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -376,6 +383,7 @@ public class Principal1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
